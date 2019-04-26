@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-pcmsv2-service
+  namespace: demo
+  annotations:
+    creator: zhsl-jx
+spec:
+  type: NodePort
+  ports:
+    - name: '80'
+      protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: test-pcmsv2-nginx
+
